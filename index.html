@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>腾冲5日休闲游</title>
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&family=Crimson+Pro:wght@400;500;600&family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;500;600;700&family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap">
+    <style>
+        :root {
+            --primary-color: #008080; /*  बदलकर Teal */
+            --secondary-color: #FFD700; /* Gold */
+            --accent-color: #D2B48C; /* Tan */
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f4f4; /*  बदलकर Light Gray */
+            --bg-dark: #333333;
+            --gold-gradient: linear-gradient(135deg, #FFD700, #FFFACD, #FFD700);
+            --gold-border: linear-gradient(to right, #FFD700, #FFFACD, #FFD700);
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --border-radius: 4px; /* 약간의 둥근 모서리 */
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23e0e0e0" d="M0,0 L100,0 L100,100 L0,100 z"/><path fill="%23cccccc" fill-opacity="0.1" d="M13,13 C50,40 50,60 87,87 M87,13 C60,50 40,50 13,87"/></svg>');
+            background-attachment: fixed;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Libre Baskerville', serif;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .title-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--spacing-lg);
+            position: relative;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23008080" d="M0,0 L100,0 L100,100 L0,100 z"/><path fill="%23006666" fill-opacity="0.3" d="M15,15 C35,35 65,35 85,15 C65,65 65,65 85,85 C65,65 35,65 15,85 C35,35 35,35 15,15 z"/></svg>');
+            border-bottom: 3px solid var(--secondary-color);
+        }
+        
+        .title-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #FFFACD; /* Light Goldenrod Yellow */
+            letter-spacing: 2px;
+        }
+
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-color);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-section {
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+            position: relative;
+        }
+        
+        .day-card {
+            border-left: 4px solid var(--primary-color);
+            padding-left: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+        }
+        
+        .day-title {
+            font-family: 'Lora', 'Crimson Pro', serif;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .spot-image {
+            width: 100%; 
+            height: 250px; 
+            margin-bottom: 15px; 
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid var(--secondary-color);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+            position: relative;
+            border-radius: var(--border-radius);
+        }
+        
+        .spot-image.with-margin-top {
+            margin-top: 20px;
+        }
+        
+        .spot-card {
+            border: 1px solid var(--secondary-color); 
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            background-color: #ffffff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .time-label {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .map-container {
+            height: 450px; 
+            background-color: #e9e9e9;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+            border: 1px solid var(--secondary-color);
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: var(--border-radius);
+        }
+        
+        .food-card, .hotel-card {
+            display: flex;
+            margin-bottom: var(--spacing-md);
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border: 1px solid var(--secondary-color);
+        }
+        
+        .card-content {
+            padding: var(--spacing-md);
+            flex: 1;
+        }
+        
+        .card-image {
+            width: 150px; /* 이미지 너비 증가 */
+            height: 200px; /* 이미지 높이 증가 */
+            background-color: #f0e6c8;
+            border-right: 1px solid var(--secondary-color);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        
+        .info-card {
+            background-color: white;
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border: 1px solid var(--secondary-color);
+            position: relative;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            overflow: hidden; /* 테이블 radius 적용 위해 */
+        }
+        
+        table th, table td {
+            padding: 10px 14px; /* 패딩 증가 */
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0; /* 연한 회색으로 변경 */
+        }
+
+        table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-family: 'Lora', serif;
+            font-weight: 700;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f9f9f9; /* 약간 더 밝은 회색 */
+        }
+
+        table tr:hover {
+            background-color: #f0f8ff; /* AliceBlue on hover */
+        }
+        
+        .map-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            transition: color 0.2s, background-color 0.2s;
+            padding: 5px 10px; /* 패딩 증가 */
+            border: 1px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            font-weight: 500;
+        }
+        
+        .map-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .map-link i {
+            margin-right: 8px; /* 아이콘 간격 증가 */
+        }
+        
+        .map-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6); /* 배경 어둡게 */
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .map-modal-content {
+            background-color: white;
+            padding: 25px; /* 패딩 증가 */
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* 그림자 강화 */
+            max-width: 350px; /* 너비 증가 */
+            width: 90%;
+            border: 1px solid var(--secondary-color);
+            position: relative;
+        }
+        
+        .map-modal-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem; /* 폰트 크기 증가 */
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px; /* 마진 증가 */
+        }
+
+        .map-modal-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* 간격 증가 */
+        }
+        
+        .map-option-btn {
+            padding: 14px; /* 패딩 증가 */
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 600; /* 폰트 두껍게 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Source Sans Pro', sans-serif;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .map-option-btn.primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .map-option-btn.primary:hover {
+            background: #006666; /* 어두운 Teal */
+            transform: translateY(-2px);
+        }
+        
+        .map-option-btn.secondary {
+            background: var(--gold-gradient);
+            color: var(--text-dark);
+            border: 1px solid var(--accent-color);
+        }
+
+        .map-option-btn.secondary:hover {
+            background: linear-gradient(135deg, #ebc200, #fff0b3, #ebc200); /* 밝은 Gold */
+            transform: translateY(-2px);
+        }
+        
+        .map-option-btn i {
+            margin-right: 10px; /* 아이콘 간격 증가 */
+        }
+        
+        .map-modal-close {
+            text-align: center;
+            margin-top: 20px; /* 마진 증가 */
+        }
+        
+        .map-modal-close button {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            text-decoration: underline;
+            cursor: pointer;
+            padding: 8px; /* 패딩 증가 */
+            font-family: 'Source Sans Pro', sans-serif;
+            transition: color 0.2s;
+        }
+
+        .map-modal-close button:hover {
+            color: var(--primary-color);
+        }
+
+        /* 추가된 활동 목록 관련 스타일 */
+        .toggle-activities {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            z-index: 2;
+        }
+        
+        .toggle-activities:hover {
+            background-color: rgba(255, 255, 255, 1);
+            transform: scale(1.1);
+        }
+
+        .toggle-activities i {
+            color: var(--primary-color);
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+        
+        .toggle-activities.active i {
+            transform: rotate(180deg);
+        }
+        
+        .activities-container {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out, margin-top 0.4s ease-in-out, padding 0.4s ease-in-out;
+            opacity: 0;
+            margin-top: 0;
+            background-color: #fdfcfa; /* 더 부드러운 배경 */
+            border-top: 0px dashed var(--secondary-color);
+            border-radius: 0 0 var(--border-radius) var(--border-radius); /* 아래쪽 모서리만 둥글게 */
+            padding: 0 15px; /* 초기 패딩 */
+        }
+        
+        .activities-container.active {
+            max-height: 800px; /* 충분한 높이 */
+            opacity: 1;
+            margin-top: 15px;
+            border-top: 1px dashed var(--secondary-color);
+            padding: 15px; /* 활성화 시 패딩 */
+        }
+        
+        .activities-list {
+            padding: 0; /* activities-container에서 패딩 관리 */
+        }
+        
+        .activity-item {
+            margin-bottom: 12px; /* 간격 조정 */
+            display: flex;
+            align-items: flex-start;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .activity-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        
+        .activity-icon {
+            font-size: 20px; /* 아이콘 크기 조정 */
+            color: var(--primary-color);
+            margin-right: 12px; /* 간격 조정 */
+            flex-shrink: 0;
+            width: 30px; /* 아이콘 공간 확보 */
+            text-align: center;
+        }
+        
+        .activity-content {
+            flex: 1;
+        }
+        
+        .activity-title {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px; /* 간격 조정 */
+            font-size: 1.05rem;
+        }
+        
+        .activity-description {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .activities-header {
+            font-family: 'Lora', 'Crimson Pro', serif;
+            text-align: left; /* 왼쪽 정렬 */
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.2rem; /* 폰트 크기 조정 */
+        }
+        
+        .activity-tag {
+            display: inline-block;
+            background-color: rgba(255, 215, 0, 0.15); /* Gold 배경 연하게 */
+            border: 1px solid var(--secondary-color);
+            padding: 3px 8px; /* 패딩 조정 */
+            font-size: 0.75rem; /* 폰트 크기 조정 */
+            border-radius: var(--border-radius);
+            margin-top: 8px; /* 간격 조정 */
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 640px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .food-card, .hotel-card {
+                flex-direction: column;
+            }
+            
+            .card-image {
+                width: 100%;
+                height: 150px; /* 모바일 이미지 높이 조정 */
+                border-right: none;
+                border-bottom: 1px solid var(--secondary-color);
+            }
+            .title-section h1 {
+                font-size: 2rem;
+            }
+            .day-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        .magazine-container {
+            max-width: 900px; /* 너비 증가 */
+            margin: 20px auto; /* 상하 마진 추가 */
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* 그림자 강화 */
+            overflow: hidden;
+            border: 1px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+        }
+    </style>
+</head>
+<body>
+    <div class="magazine-container">
+        <!-- 行程标题区 -->
+        <div class="title-section">
+            <h1>腾冲5日休闲游</h1>
+            <p>探索魅力侨乡，体验火山热海 (行程日期：2025年5月)</p>
+            <p><i class="fas fa-cloud-sun"></i> 天气参考: 春季, 20°C - 28°C, 多云或晴天</p>
+        </div>
+        
+        <!-- 行程概览区 -->
+        <div class="content-section">
+            <h2 class="section-heading">行程总览</h2>
+            
+            <!-- Day 1 -->
+            <div class="day-card">
+                <h3 class="day-title">Day 1: 抵达腾冲，漫步和顺古镇</h3>
+                <div class="spot-image" style="background-image: url('img/tengchong/1.jpg');"></div>
+                <div class="spot-card">
+                    <div class="time-label"><i class="far fa-clock"></i> 全天</div>
+                    <h4>抵达腾冲 & 和顺古镇</h4>
+                    <p>抵达腾冲，前往酒店办理入住。下午悠闲游览中国十大魅力名镇之首的【和顺古镇】，感受古朴的建筑、淳朴的民风和深厚的侨乡文化。沿着古镇的石板路，参观和顺图书馆、艾思奇故居、元龙阁等。</p>
+                    <a href="javascript:void(0);" onclick="showNavigationOptions('和顺古镇', '25.008174', '98.458666')" class="map-link">
+                        <i class="fas fa-map-marker-alt"></i> 和顺古镇导航
+                    </a>
+                    <div class="toggle-activities" onclick="toggleActivities(this)">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="activities-container">
+                        <div class="activities-list">
+                            <h4 class="activities-header">和顺古镇活动推荐</h4>
+                            <div class="activity-item">
+                                <div class="activity-icon">🏛️</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">参观和顺图书馆</div>
+                                    <div class="activity-description">中国最大的乡村图书馆之一，感受百年书香。</div>
+                                    <div class="activity-tag">文化体验</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">🏞️</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">漫步野鸭湖畔</div>
+                                    <div class="activity-description">欣赏湖光山色，感受古镇的宁静与和谐。</div>
+                                    <div class="activity-tag">自然风光</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">🍵</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">品尝寸氏豆粉</div>
+                                    <div class="activity-description">和顺特色小吃，味道独特。</div>
+                                    <div class="activity-tag">地道美食</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-card">
+                    <div class="time-label"><i class="fas fa-utensils"></i> 晚餐</div>
+                    <h4>和顺人家/妈妈的味道</h4>
+                    <p>在古镇内选择一家有当地特色的餐厅，品尝地道的腾冲菜，如：土锅子、大救驾等。</p>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card">
+                <h3 class="day-title">Day 2: 热海奇观，地热温泉体验</h3>
+                <div class="spot-image" style="background-image: url('img/tengchong/2.jpg');"></div>
+                <div class="spot-card">
+                    <div class="time-label"><i class="far fa-clock"></i> 上午</div>
+                    <h4>腾冲热海风景区</h4>
+                    <p>前往中国三大地热区之一的【热海景区】。参观大滚锅、蛤蟆嘴、珍珠泉、怀胎井等形态各异的地热景观，感受大自然的鬼斧神工。景区内热气蒸腾，硫磺味弥漫，蔚为壮观。</p>
+                    <a href="javascript:void(0);" onclick="showNavigationOptions('腾冲热海风景区', '24.948688', '98.437969')" class="map-link">
+                        <i class="fas fa-map-marker-alt"></i> 热海景区导航
+                    </a>
+                    <div class="toggle-activities" onclick="toggleActivities(this)">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="activities-container">
+                        <div class="activities-list">
+                            <h4 class="activities-header">热海景区活动推荐</h4>
+                            <div class="activity-item">
+                                <div class="activity-icon">♨️</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">体验天然温泉煮鸡蛋</div>
+                                    <div class="activity-description">用大滚锅旁的热泉亲手煮熟鸡蛋、花生，别有风味。</div>
+                                    <div class="activity-tag">趣味体验</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">🚶</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">热海步道徒步</div>
+                                    <div class="activity-description">沿着景区修建的步道，近距离观赏各种热泉。</div>
+                                    <div class="activity-tag">健康徒步</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-card">
+                    <div class="time-label"><i class="fas fa-spa"></i> 下午</div>
+                    <h4>热海温泉浴</h4>
+                    <p>在热海景区内的温泉酒店或浴谷体验天然硫磺温泉，洗去旅途疲惫，享受地热带来的舒适与健康。</p>
+                </div>
+                 <div class="spot-card">
+                    <div class="time-label"><i class="fas fa-utensils"></i> 晚餐</div>
+                    <h4>景区餐厅/市区餐厅</h4>
+                    <p>可在景区内或返回腾冲市区选择餐厅用餐。</p>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-card">
+                <h3 class="day-title">Day 3: 北海湿地泛舟，叠水河瀑布</h3>
+                <div class="spot-image" style="background-image: url('img/tengchong/3.jpg');"></div>
+                 <div class="spot-card">
+                    <div class="time-label"><i class="far fa-clock"></i> 上午</div>
+                    <h4>腾冲北海湿地</h4>
+                    <p>游览国家首批重点湿地之一的【北海湿地】。这里是高原火山堰塞湖生态系统，水草丰茂，鸢飞鱼跃。可体验划船或乘坐当地特色的草排，在水上草原穿梭，感受独特的湿地风光。</p>
+                    <a href="javascript:void(0);" onclick="showNavigationOptions('腾冲北海湿地', '25.123805', '98.556078')" class="map-link">
+                        <i class="fas fa-map-marker-alt"></i> 北海湿地导航
+                    </a>
+                    <div class="toggle-activities" onclick="toggleActivities(this)">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="activities-container">
+                        <div class="activities-list">
+                            <h4 class="activities-header">北海湿地活动推荐</h4>
+                            <div class="activity-item">
+                                <div class="activity-icon">🛶</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">乘坐草排</div>
+                                    <div class="activity-description">体验在厚厚的草甸上漂浮的奇妙感觉。</div>
+                                    <div class="activity-tag">特色体验</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">🐦</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">观鸟</div>
+                                    <div class="activity-description">春秋两季是候鸟迁徙的季节，可观赏到多种珍稀鸟类。</div>
+                                    <div class="activity-tag">生态观察</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-image with-margin-top" style="background-image: url('img/tengchong/4.jpg');"></div>
+                <div class="spot-card">
+                    <div class="time-label"><i class="far fa-clock"></i> 下午</div>
+                    <h4>叠水河瀑布</h4>
+                    <p>参观腾冲十二景之一的【叠水河瀑布】。这是国内唯一的城市火山堰塞瀑布，落差达46米，水声轰鸣，气势磅礴。徐霞客曾在此留下"迸玉联珠"的赞叹。</p>
+                    <a href="javascript:void(0);" onclick="showNavigationOptions('叠水河瀑布风景区', '25.020283', '98.490276')" class="map-link">
+                        <i class="fas fa-map-marker-alt"></i> 叠水河瀑布导航
+                    </a>
+                </div>
+                <div class="spot-card">
+                    <div class="time-label"><i class="fas fa-utensils"></i> 晚餐</div>
+                    <h4>市区特色小吃</h4>
+                    <p>返回市区，自由品尝腾冲饵丝、稀豆粉等当地特色小吃。</p>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-card">
+                <h3 class="day-title">Day 4: 火山公园探秘，柱状节理</h3>
+                <div class="spot-image" style="background-image: url('img/tengchong/5.jpg');"></div>
+                <div class="spot-card">
+                    <div class="time-label"><i class="far fa-clock"></i> 上午</div>
+                    <h4>腾冲火山地热国家地质公园</h4>
+                    <p>前往【腾冲火山地热国家地质公园】，这里是中国最年轻的火山群之一。可选择乘坐热气球（视天气情况）从空中俯瞰火山口，或徒步攀登大小空山，近距离观察火山坑。</p>
+                    <a href="javascript:void(0);" onclick="showNavigationOptions('腾冲火山地热国家地质公园', '25.219332', '98.510344')" class="map-link">
+                        <i class="fas fa-map-marker-alt"></i> 火山公园导航
+                    </a>
+                     <div class="toggle-activities" onclick="toggleActivities(this)">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="activities-container">
+                        <div class="activities-list">
+                            <h4 class="activities-header">火山公园活动推荐</h4>
+                            <div class="activity-item">
+                                <div class="activity-icon">🎈</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">乘坐热气球 (可选)</div>
+                                    <div class="activity-description">天气允许时，可体验热气球升空，俯瞰火山群。</div>
+                                    <div class="activity-tag">刺激体验</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">🌋</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">探秘火山口</div>
+                                    <div class="activity-description">徒步至大、小空山火山口底部，感受火山遗迹。</div>
+                                    <div class="activity-tag">地质科考</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot-image with-margin-top" style="background-image: url('img/tengchong/11.jpg');"></div>
+                 <div class="spot-card">
+                    <div class="time-label"><i class="far fa-clock"></i> 下午</div>
+                    <h4>黑鱼河 & 柱状节理</h4>
+                    <p>游览火山公园周边的【黑鱼河】和【柱状节理】。黑鱼河是火山熔岩形成的地下暗河出口，河水清澈，有大量黑鱼。柱状节理则是火山岩浆冷却形成的奇特六边形石柱群，蔚为壮观。</p>
+                </div>
+                 <div class="spot-card">
+                    <div class="time-label"><i class="fas fa-utensils"></i> 晚餐</div>
+                    <h4>火山石锅宴</h4>
+                    <p>品尝当地特色的火山石锅宴，用滚烫的火山石烹饪食材，味道鲜美独特。</p>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-card">
+                <h3 class="day-title">Day 5: 银杏村/当地集市，愉快返程</h3>
+                <div class="spot-image" style="background-image: url('img/tengchong/6.jpg');"></div>
+                <div class="spot-card">
+                    <div class="time-label"><i class="far fa-clock"></i> 上午</div>
+                    <h4>固东江东银杏村 (秋季) / 当地集市或茶山</h4>
+                    <p>若在秋季（10月底-12月初），强烈推荐前往【固东江东银杏村】，欣赏遍地金黄的银杏叶构成的童话世界。若非银杏季节，可安排参观当地特色集市，体验民俗风情，或前往附近的茶山体验采茶、品茶的乐趣。</p>
+                    <a href="javascript:void(0);" onclick="showNavigationOptions('腾冲固东镇江东银杏村', '25.302629', '98.519192')" class="map-link">
+                        <i class="fas fa-map-marker-alt"></i> 银杏村导航
+                    </a>
+                </div>
+                <div class="spot-card">
+                    <div class="time-label"><i class="fas fa-plane-departure"></i> 下午</div>
+                    <h4>返程</h4>
+                    <p>根据您的航班或车次时间，整理行装，适时前往机场或车站，结束愉快的腾冲5日休闲之旅。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 地图路线总览区 -->
+        <div class="content-section">
+            <h2 class="section-heading">地图标记总览</h2>
+            <p class="mb-4">以下地图显示了本次5日游主要景点的分布位置：</p>
+            <div class="map-container">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://uri.amap.com/marker?markers=98.458666,25.008174,和顺古镇|98.437969,24.948688,热海景区|98.556078,25.123805,北海湿地|98.490276,25.020283,叠水河瀑布|98.510344,25.219332,火山公园|98.519192,25.302629,银杏村&center=98.49,25.10&zoom=10"
+                >
+                </iframe>
+            </div>
+            <div class="text-right text-xs text-gray-500 mt-1">
+                <p>点击地图上的标记可以查看景点详情</p>
+            </div>
+        </div>
+        
+        <!-- 推荐时间表区 (简化版) -->
+        <div class="content-section">
+            <h2 class="section-heading">休闲时间表参考</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>上午活动</th>
+                        <th>下午活动</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Day 1</td>
+                        <td>抵达腾冲，入住</td>
+                        <td>和顺古镇漫游</td>
+                        <td>感受侨乡文化</td>
+                    </tr>
+                    <tr>
+                        <td>Day 2</td>
+                        <td>热海景区地热奇观</td>
+                        <td>热海温泉体验</td>
+                        <td>放松身心</td>
+                    </tr>
+                    <tr>
+                        <td>Day 3</td>
+                        <td>北海湿地泛舟</td>
+                        <td>叠水河瀑布观光</td>
+                        <td>亲近自然</td>
+                    </tr>
+                    <tr>
+                        <td>Day 4</td>
+                        <td>火山地质公园探秘</td>
+                        <td>黑鱼河、柱状节理</td>
+                        <td>体验火山地貌</td>
+                    </tr>
+                    <tr>
+                        <td>Day 5</td>
+                        <td>银杏村(秋)/集市/茶山</td>
+                        <td>愉快返程</td>
+                        <td>季节性选择</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 交通信息区 -->
+        <div class="content-section">
+            <h2 class="section-heading">交通出行建议</h2>
+            <div class="info-card">
+                <h4><i class="fas fa-car"></i> 腾冲当地交通</h4>
+                <ul class="list-disc pl-5">
+                    <li><strong>包车/租车</strong>: 游览各景点较为分散，包车或租车是比较便捷的选择，可以灵活安排时间。</li>
+                    <li><strong>出租车/网约车</strong>: 市区内及部分近郊景点可选择出租车或网约车。</li>
+                    <li><strong>旅游专线车</strong>: 部分热门景点之间可能有旅游专线车，可提前查询。</li>
+                    <li><strong>公共交通</strong>: 市区内有公交线路，但覆盖景点可能有限。</li>
+                </ul>
+            </div>
+             <div class="info-card mt-4">
+                <h4><i class="fas fa-info-circle"></i> 温馨提示</h4>
+                <ul class="list-disc pl-5">
+                    <li>腾冲海拔较高（约1600米），紫外线强，注意防晒。</li>
+                    <li>早晚温差较大，请准备合适衣物。</li>
+                    <li>雨季（5-10月）出行请备好雨具。</li>
+                    <li>温泉体验请遵守相关规定，部分人群不宜泡温泉。</li>
+                    <li>尊重当地民族风俗习惯。</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 住宿与餐饮区 (简化推荐) -->
+        <div class="content-section">
+            <h2 class="section-heading">住宿与餐饮推荐</h2>
+            <h3 class="day-title">住宿参考</h3>
+            <div class="hotel-card">
+                <div class="card-image" style="background-image: url('img/tengchong/7.jpg');"></div>
+                <div class="card-content">
+                    <h4>和顺古镇内特色客栈</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 和顺古镇景区内</p>
+                    <p><i class="fas fa-info-circle"></i> 价格范围: ¥200-¥800/晚</p>
+                    <p><i class="fas fa-star"></i> 特色: 体验古镇风情，环境安静舒适。</p>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <div class="card-image" style="background-image: url('img/tengchong/8.jpg');"></div>
+                <div class="card-content">
+                    <h4>腾冲市区星级酒店/精品酒店</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 腾冲市中心区域</p>
+                    <p><i class="fas fa-info-circle"></i> 价格范围: ¥300-¥1000+/晚</p>
+                    <p><i class="fas fa-concierge-bell"></i> 特色: 交通便利，设施完善，服务标准。</p>
+                </div>
+            </div>
+
+            <h3 class="day-title mt-6">餐饮亮点</h3>
+            <div class="food-card">
+                 <div class="card-image" style="background-image: url('img/tengchong/9.jpg');"></div>
+                <div class="card-content">
+                    <h4>腾冲土锅子</h4>
+                    <p><i class="fas fa-utensils"></i> 腾冲当地特色菜</p>
+                    <div class="my-2">
+                        <span class="food-tag">必吃榜</span> <span class="food-tag">暖心暖胃</span> <span class="food-tag">多人共享</span>
+                    </div>
+                    <p>以土陶锅为炊具，将多种食材层层铺叠慢炖而成，汤鲜味美。</p>
+                </div>
+            </div>
+             <div class="food-card">
+                 <div class="card-image" style="background-image: url('img/tengchong/10.jpg');"></div>
+                <div class="card-content">
+                    <h4>大救驾 (腾冲炒饵块)</h4>
+                    <p><i class="fas fa-utensils"></i> 腾冲著名小吃</p>
+                     <div class="my-2">
+                        <span class="food-tag">历史名吃</span> <span class="food-tag">香辣可口</span> <span class="food-tag">主食小吃</span>
+                    </div>
+                    <p>将饵块切片，配以鲜肉、鸡蛋、蔬菜等一同爆炒，香气扑鼻。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 实用信息区 -->
+        <div class="content-section">
+            <h2 class="section-heading">实用信息</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4><i class="fas fa-phone-alt"></i> 紧急联系</h4>
+                    <ul class="list-disc pl-5">
+                        <li><strong>报警电话</strong>: 110</li>
+                        <li><strong>医疗急救</strong>: 120</li>
+                        <li><strong>消防火警</strong>: 119</li>
+                        <li><strong>腾冲旅游投诉</strong>: 0875-5132969</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-wallet"></i> 预算参考 (每人)</h4>
+                     <ul class="list-disc pl-5">
+                        <li><strong>景点门票</strong>: 约 ¥400-¥600 (部分景点可选)</li>
+                        <li><strong>餐饮费用</strong>: 约 ¥150-¥250/天</li>
+                        <li><strong>住宿费用</strong>: 约 ¥200-¥600/晚 (丰俭由人)</li>
+                        <li><strong>当地交通</strong>: 约 ¥50-¥150/天 (视出行方式)</li>
+                        <li><strong>总预算(5天)</strong>: 约 ¥2500-¥5000 (不含往返大交通)</li>
+                    </ul>
+                </div>
+                 <div class="info-card">
+                    <h4><i class="fas fa-suitcase"></i> 行囊建议</h4>
+                    <ul class="list-disc pl-5">
+                        <li>舒适的徒步鞋</li>
+                        <li>防晒霜、太阳帽、墨镜</li>
+                        <li>雨具 (尤其雨季)</li>
+                        <li>常用药品 (感冒药、肠胃药等)</li>
+                        <li>保湿护肤品 (高原干燥)</li>
+                        <li>身份证等有效证件</li>
+                        <li>相机、充电宝</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 导航选择弹窗 -->
+    <div class="map-modal" id="mapModal">
+        <div class="map-modal-content">
+            <div class="map-modal-title">选择导航方式</div>
+            <div class="map-modal-options">
+                <button class="map-option-btn primary" id="openInApp">
+                    <i class="fas fa-map-marked-alt"></i> 使用高德地图APP
+                </button>
+                <button class="map-option-btn secondary" id="openInWeb">
+                    <i class="fas fa-globe"></i> 使用高德地图网页版
+                </button>
+            </div>
+            <div class="map-modal-close">
+                <button id="closeMapModal">取消</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentNavData = { name: '', lat: '', lon: '' };
+
+        function showNavigationOptions(name, lat, lon) {
+            currentNavData = { name, lat, lon };
+            document.getElementById('mapModal').style.display = 'flex';
+        }
+
+        document.getElementById('closeMapModal').addEventListener('click', function() {
+            document.getElementById('mapModal').style.display = 'none';
+        });
+
+        document.getElementById('openInApp').addEventListener('click', function() {
+            const { name, lat, lon } = currentNavData;
+            const urls = [
+                `androidamap://viewMap?sourceApplication=appname&poiname=${encodeURIComponent(name)}&lat=${lat}&lon=${lon}&dev=0`,
+                `amapuri://route/plan/?sourceApplication=appname&dlat=${lat}&dlon=${lon}&dname=${encodeURIComponent(name)}&dev=0`,
+                `amap://map/marker?sourceApplication=appname&name=${encodeURIComponent(name)}&position=${lon},${lat}`,
+                `iosamap://viewMap?sourceApplication=appname&poiname=${encodeURIComponent(name)}&lat=${lat}&lon=${lon}&dev=0`,
+                `iosamap://path?sourceApplication=appname&dlat=${lat}&dlon=${lon}&dname=${encodeURIComponent(name)}&dev=0`
+            ];
+            
+            let opened = false;
+            function tryOpenApp(index) {
+                if (index >= urls.length) {
+                    if (!opened) { // 모든 시도 실패 시 웹 버전 실행
+                        alert("无法打开高德地图APP，将尝试打开网页版。");
+                        window.open(`https://uri.amap.com/marker?position=${lon},${lat}&name=${encodeURIComponent(name)}`, '_blank');
+                    }
+                    return;
+                }
+                
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                iframe.src = urls[index];
+                
+                const timer = setTimeout(function() {
+                    document.body.removeChild(iframe);
+                    if (!opened) { // 현재 링크가 앱을 열지 못했으면 다음 링크 시도
+                        tryOpenApp(index + 1);
+                    }
+                }, 800); // 타임아웃 시간 조정
+
+                // 페이지 숨김 이벤트로 앱 실행 감지 (좀 더 신뢰성 있는 방법)
+                function visibilityChangeHandler() {
+                    if (document.hidden || document.webkitHidden || document.msHidden) {
+                        opened = true;
+                        clearTimeout(timer); // 앱이 열렸으므로 타이머 제거
+                        document.removeEventListener('visibilitychange', visibilityChangeHandler, false);
+                        document.removeEventListener('webkitvisibilitychange', visibilityChangeHandler, false);
+                        document.removeEventListener('msvisibilitychange', visibilityChangeHandler, false);
+                        document.body.removeChild(iframe); // iframe 즉시 제거
+                    }
+                }
+                document.addEventListener('visibilitychange', visibilityChangeHandler, false);
+                document.addEventListener('webkitvisibilitychange', visibilityChangeHandler, false);
+                document.addEventListener('msvisibilitychange', visibilityChangeHandler, false);
+            }
+            tryOpenApp(0);
+            document.getElementById('mapModal').style.display = 'none';
+        });
+
+        document.getElementById('openInWeb').addEventListener('click', function() {
+            const { name, lat, lon } = currentNavData;
+            const webUrl = `https://uri.amap.com/search?keyword=${encodeURIComponent(name)}&center=${lon},${lat}&zoom=18`;
+            window.open(webUrl, '_blank');
+            document.getElementById('mapModal').style.display = 'none';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navigationLinks = document.querySelectorAll('.map-link');
+            navigationLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // e.preventDefault(); // onclick에서 처리하므로 이 줄은 제거하거나 주석 처리
+                    // showNavigationOptions 함수가 onclick 핸들러에서 직접 호출되므로,
+                    // 여기서는 href에서 정보를 추출할 필요가 없습니다.
+                });
+            });
+        });
+
+        function toggleActivities(toggleBtn) {
+            const isActive = toggleBtn.classList.contains('active');
+            const activitiesContainer = toggleBtn.nextElementSibling;
+            if (isActive) {
+                toggleBtn.classList.remove('active');
+                activitiesContainer.classList.remove('active');
+            } else {
+                toggleBtn.classList.add('active');
+                activitiesContainer.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html> 
